@@ -1,9 +1,9 @@
 import React, { Component } from "react";
+import "./login.component.css";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import AuthService from "../services/auth.service";
-import { LaptopWindowsRounded } from "@material-ui/icons";
 
 const required = value => {
   if (!value) {
@@ -35,7 +35,7 @@ export default class Login extends Component {
     });
   }
 
-  onChangePassoword(e) {
+  onChangePassword(e) {
     this.setState({
       password: e.target.value
     });
@@ -133,6 +133,9 @@ export default class Login extends Component {
               </div>
             )}
             <CheckButton
+              variant="outlined"
+              className="login__check"
+              fullWidth
               style={{ display: "none" }}
               ref={c => {
                 this.checkBtn = c;
