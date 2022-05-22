@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import "./register.component.css";
 import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
