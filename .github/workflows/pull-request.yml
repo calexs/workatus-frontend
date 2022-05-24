@@ -1,0 +1,12 @@
+name: pull-request
+on:
+  pull_request:
+    branches: 
+      - 'new-component/**'
+      
+jobs: 
+  test-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Testing ${{ github.event_name }} event."
+      - run: echo "The status is ${{ job.status }}."
