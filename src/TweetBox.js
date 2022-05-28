@@ -32,19 +32,18 @@ function TweetBox() {
           <input
             value={tweetMessage}
             onChange={(e) => setTweetMessage(e.target.value)}
-            placeholder="What's happening?"
+            placeholder="What's going on?"
             type="text"
           />
         </div>
         <input
-          placeholder="Optional: Enter image URL"
           value={tweetImage}
           onChange={(e) => setTweetImage(e.target.value)}
           type="text"
           className="tweetBox__imageInput"
         />
         <Button onClick={sendTweet} type="submit" className="tweetBox__button">
-          Tweet
+          Work
         </Button>
       </form>
     </div>

@@ -1,11 +1,10 @@
 import axios from "axios";
-
-const API_URL = "";
+const API_URL = "https://workatus.herokuapp.com/api/usuario/";
 
 class AuthService {
   async login(username, password) {
     const res = await axios
-      .post(API_URL + "signin", {
+      .post(API_URL + "check", {
         username,
         password
       });
@@ -19,12 +18,12 @@ class AuthService {
     localStorage.removeItem("user");
   }
 
-  register(username, email, password) {
+  register(username, password, role) {
     return axios
-      .post(API_URL + "signup", {
+      .post(API_URL + "insert", {
         username,
-        email,
-        password
+        password,
+        role
       });
   }
 

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { useState, useEffect } from "react";
 import "./Feed.css";
 import Post from "./Post";
 import TweetBox from "./TweetBox";
@@ -54,14 +54,20 @@ export default class Feed extends Component {
   }
 }
 
+{/* <div className="container">
+  <header className="jumbotron">
+    <h3>{this.state.content}</h3>
+  </header>
+</div> */}
+
 // function Feed() {
 //   const [posts, setPosts] = useState([]);
 
-//   useEffect(() => {
-//     db.collection("posts").onSnapshot((snapshot) => {
-//       setPosts(snapshot.docs.map((doc) => doc.data()));
-//     });
-//   }, []);
+//   // useEffect(() => {
+//   //   db.collection("posts").onSnapshot((snapshot) => {
+//   //     setPosts(snapshot.docs.map((doc) => doc.data()));
+//   //   });
+//   // }, []);
 
 //   return (
 //     <div className="feed">
